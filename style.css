@@ -79,14 +79,14 @@ header,
 
     font-size: 1.5rem;
     font-family: "DM Sans", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
     color: var(--neon-300);
     text-shadow:
     0 0 0.125em var(--neon-200),
     0 0 .5em var(--neon-300);
 
-    border: var(--neon-300) 0.125em solid;
+    border: var(--neon-300) 2px solid;
     padding: .25em 1em;
     border-radius: .5em;
     box-shadow: 
@@ -106,7 +106,7 @@ header,
     width: 100%;
     height: 100%;
 
-    transform: perspective(1.5em) rotateX(40deg) scale(1, .5);
+    transform: perspective(1em) rotateX(40deg) scale(1, .35);
     filter: blur(1em);
     opacity: 0.6;
     transition: opacity 200ms linear;
@@ -132,7 +132,7 @@ header,
     grid-template-areas: 
         "name graphic"
         "subtitle graphic";
-    grid-gap: 1rem;
+    grid-gap: 0;
     width: 100%;
     min-height: 100vh;
     padding: 2em 3em;
@@ -142,6 +142,7 @@ header,
 #name-container {
     grid-area: name;
     align-self: end;
+    margin-bottom: -5rem;
 }
 
 #name {
@@ -149,13 +150,12 @@ header,
     font-size: 5rem;
     font-weight: 900;
     color: var(--neutral-100);
-    justify-content: center;
 }
 
 #subtitle-container {
     grid-area: subtitle;
     align-self: start;
-    margin-top: -7em;
+    margin-top: -1em;
 }
 
 #subtitle {
@@ -185,25 +185,25 @@ header,
 
 #ring1 {
     transform: translate(-50%, -50%) rotate(120deg);
-    top: 40%;
+    top: 50%;
     left: 50%;
 }
 
 #ring2 {
     transform: translate(-50%, -50%) rotate(240deg);
-    top: 40%;
+    top: 50%;
     left: 50%;
 }
 
 #ring3 {
     transform: translate(-50%, -50%);
-    top: 40%;
+    top: 50%;
     left: 50%;
 }
 
 #nucleus {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 28rem;
@@ -226,13 +226,13 @@ header,
     height: 25rem;
     background: var(--neon-300);
     padding: 1em;
-    border-radius: 0.75em;
+    border-radius: 0.5em;
     transition: transform 200ms ease-in-out;
 }
 
 .project-tile:hover,
 .project-tile:focus {
-    transform: translateY(-2%);
+    transform: scale(1.02);
 }
 
 /* background text */
