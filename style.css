@@ -4,6 +4,8 @@
 :root {
     --neutral-100: hsl(10, 2%, 90%);
     --neutral-900: hsl(0, 2%, 10%);
+    --neon-1: hsl(190, 100%, 40%);
+    --neon-2: hsl(190, 100%, 80%);
 }
 
 *,
@@ -42,6 +44,61 @@ body {
     font-weight: 900;
     color: var(--neutral-100);
     opacity: .02;
+}
+
+header,
+#navbar-container {
+    width: 100%;
+}
+
+#navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    display: inline-block;
+    list-style: none;
+    padding: 2rem 4rem;
+    /*margin-left: 4rem;*/
+}
+
+.nav-link {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--neon-1);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    text-shadow:
+    0 0 0.125em var(--neon-2),
+    0 0 1em var(--neon-1);
+}
+
+.nav-link::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--neon-1);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1.5em) rotateX(40deg) scale(1, .5);
+    filter: blur(.6em);
+    opacity: 0.6;
+    transition: opacity 200ms linear;
+
+}
+
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+    opacity: 1;
 }
 
 
