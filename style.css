@@ -214,26 +214,38 @@ header,
 
 #projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 20rem));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 25rem));
     grid-template-rows: repeat(auto-fill, minmax(25rem, 25rem));
     grid-gap: 4em;
     justify-content: center;
-    padding: 3em;
+    padding: 2em;
 }
 
 .project-tile {
-    width: 20rem;
+    width: 25rem;
     height: 25rem;
     background: var(--neon-300);
-    padding: 1em;
-    border-radius: 0.5em;
+    padding: 13rem 0 0 0;
+    border-radius: 0.5rem;
     transition: transform 200ms ease-in-out;
+    color: var(--neutral-100);
 }
 
+.tile-content {
+    padding: 1.5em;
+    background: linear-gradient(
+        hsl(0 2% 10% / 0),
+        hsl(0 2% 10%/ 1)
+    );
+    border-radius: 0 0 .5em .5em;
+}
+
+/*
 .project-tile:hover,
 .project-tile:focus {
     transform: scale(1.02);
 }
+*/
 
 /* background text */
 @media (min-width: 480px) {
