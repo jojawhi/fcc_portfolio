@@ -49,18 +49,27 @@ body {
 header,
 #navbar-container {
     width: 100%;
+    position: fixed;
+    z-index: 3;
 }
 
 #navbar-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: 2em;
+    background: linear-gradient(
+        hsl(0 2% 10% / 1) 25%,
+        hsl(0 2% 10% / 0.8) 60%,
+        hsl(0 2% 10% / 0.5) 80%,
+        hsl(0 2% 10% / 0)
+        );
 }
 
 .nav-item {
     display: inline-block;
     list-style: none;
-    padding: 2rem 4rem;
+    padding: 2em 4em;
     /*margin-left: 4rem;*/
 }
 
@@ -140,6 +149,7 @@ header,
     font-size: 5rem;
     font-weight: 900;
     color: var(--neutral-100);
+    justify-content: center;
 }
 
 #subtitle-container {
@@ -167,7 +177,7 @@ header,
 .ring {
     position: absolute;
     width: 38rem;
-    height: 18rem;
+    height: 20rem;
     border: .75rem solid var(--neutral-100);
     border-radius: 50%;
     z-index: 2;
@@ -198,12 +208,31 @@ header,
     transform: translate(-50%, -50%);
     width: 28rem;
     height: 28rem;
-    background: linear-gradient(to top, var(--neon-300), var(--neutral-900));
+    background: linear-gradient(to top left, var(--neon-300), var(--neutral-900));
     border-radius: 50%;
 }
 
-.planet {
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 20rem));
+    grid-template-rows: repeat(auto-fill, minmax(25rem, 25rem));
+    grid-gap: 4em;
+    justify-content: center;
+    padding: 3em;
+}
 
+.project-tile {
+    width: 20rem;
+    height: 25rem;
+    background: var(--neon-300);
+    padding: 1em;
+    border-radius: 0.75em;
+    transition: transform 200ms ease-in-out;
+}
+
+.project-tile:hover,
+.project-tile:focus {
+    transform: translateY(-2%);
 }
 
 /* background text */
