@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --neutral-100: hsl(10, 10%, 95%);
+    --neutral-900: hsl(10, 5%, 5%);
+}
 
 *,
 *::before,
@@ -6,6 +12,58 @@
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    background: var(--neutral-900);
+    overflow: hidden;
+}
+
+#background-container {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.background-text {
+    font-family: "Monsterrat", sans-serif;
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: 1.5rem;
+    color: var(--neutral-100);
+    opacity: .02;
+}
+
+#name {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    color: var(--neutral-100);
+}
+
+#welcome-section {
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+}
+
+/* background text */
+
+@media (min-width: 480px) {
+    .background-text {
+        line-height: 8rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .background-text {
+        font-size: 12rem;
+        line-height: 9rem;
+    }
 }
