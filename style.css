@@ -4,8 +4,8 @@
 :root {
     --neutral-100: hsl(10, 2%, 90%);
     --neutral-900: hsl(0, 2%, 10%);
-    --neon-1: hsl(190, 100%, 40%);
-    --neon-2: hsl(190, 100%, 80%);
+    --neon-300: hsl(190, 100%, 40%);
+    --neon-200: hsl(190, 100%, 60%);
 }
 
 *,
@@ -66,35 +66,49 @@ header,
 
 .nav-link {
     position: relative;
+    cursor: pointer;
+
     font-size: 1.5rem;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-weight: 700;
     text-decoration: none;
-    color: var(--neon-1);
-    cursor: pointer;
-    transition: 200ms ease-in-out;
+    color: var(--neon-300);
     text-shadow:
-    0 0 0.125em var(--neon-2),
-    0 0 1em var(--neon-1);
+    0 0 0.125em var(--neon-200),
+    0 0 .5em var(--neon-300);
+
+    border: var(--neon-300) 0.125em solid;
+    padding: .25em 1em;
+    border-radius: .5em;
+    box-shadow: 
+    inset 0 0 0.5em 0 var(--neon-300),
+    0 0 0.5em 0 var(--neon-300);
+    
+    transition: 200ms ease-in-out;
 }
 
 .nav-link::before {
     pointer-events: none;
     content: "";
     position: absolute;
-    background: var(--neon-1);
+    background: var(--neon-300);
     top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
 
     transform: perspective(1.5em) rotateX(40deg) scale(1, .5);
-    filter: blur(.6em);
+    filter: blur(1em);
     opacity: 0.6;
     transition: opacity 200ms linear;
 
 }
 
+.nav-link:hover {
+    text-shadow:
+    0 0 0.25em var(--neon-200),
+    0 0 1em var(--neon-300);
+}
 
 .nav-link:hover::before,
 .nav-link:focus::before {
@@ -102,22 +116,97 @@ header,
 }
 
 
-#name {
-    font-family: "DM Sans", sans-serif;
-    font-size: 2rem;
-    color: var(--neutral-100);
-}
-
 #welcome-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "name graphic"
+        "subtitle graphic";
+    grid-gap: 1rem;
     width: 100%;
     min-height: 100vh;
+    padding: 2em 3em;
     background: transparent;
 }
 
+#name-container {
+    grid-area: name;
+    align-self: end;
+}
+
+#name {
+    font-family: "Monsterrat", sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--neutral-100);
+}
+
+#subtitle-container {
+    grid-area: subtitle;
+    align-self: start;
+    margin-top: -7em;
+}
+
+#subtitle {
+    grid-area: subtitle;
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: var(--neutral-100);
+}
+
+
+/* graphic */
+
+#graphic-container {
+    grid-area: graphic;
+    position: relative;
+}
+
+.ring {
+    position: absolute;
+    width: 38rem;
+    height: 18rem;
+    border: .75rem solid var(--neutral-100);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#ring1 {
+    transform: translate(-50%, -50%) rotate(120deg);
+    top: 40%;
+    left: 50%;
+}
+
+#ring2 {
+    transform: translate(-50%, -50%) rotate(240deg);
+    top: 40%;
+    left: 50%;
+}
+
+#ring3 {
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+}
+
+#nucleus {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28rem;
+    height: 28rem;
+    background: linear-gradient(to top, var(--neon-300), var(--neutral-900));
+    border-radius: 50%;
+}
+
+.planet {
+
+}
+
 /* background text */
-
-
-
 @media (min-width: 480px) {
     .background-text {
         line-height: 6.5rem;
