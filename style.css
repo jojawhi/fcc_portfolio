@@ -24,6 +24,7 @@ body {
     padding: 0;
     margin: 0;
     background: var(--neutral-900);
+    scroll-behavior: smooth;
 }
 
 
@@ -40,10 +41,10 @@ body {
     width: 100%;
     font-family: "Monsterrat", sans-serif;
     font-size: 8rem;
-    line-height: 0;
+    line-height: 6rem;
     font-weight: 900;
     color: var(--neutral-100);
-    opacity: .02;
+    opacity: .05;
 }
 
 header,
@@ -81,7 +82,7 @@ header,
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
     text-decoration: none;
-    color: var(--neon-300);
+    color: var(--neutral-100);
     text-shadow:
     0 0 0.125em var(--neon-200),
     0 0 .5em var(--neon-300);
@@ -276,7 +277,7 @@ header,
     font-family: "DM Sans", sans-serif;
     font-weight: 300;
     text-decoration: none;
-    color: var(--neon-300);
+    color: var(--neutral-100);
     text-shadow:
     0 0 0.125em var(--neon-200),
     0 0 .5em var(--neon-300);
@@ -288,14 +289,6 @@ header,
     inset 0 0 0.5em 0 var(--neon-300),
     0 0 0.5em 0 var(--neon-300);
 
-    /*
-    width: 6em;
-    height: 3em;
-    padding: .5em 2em;
-    color: var(--neutral-100);
-    text-decoration: none;
-    background: var(--neon-300);
-    */
 }
 
 #tile1 {
@@ -340,6 +333,62 @@ header,
     background-position: center;
 }
 
+#social-section {
+    width: 100%;
+}
+
+#social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 8rem 3rem;
+
+}
+
+.social-link-container {
+    display: flex;
+    justify-content: center;
+    width: 12em;
+    max-width: 90%;
+    background: transparent;
+    padding: 2em 0;
+ 
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.5em;
+    
+
+    border: var(--neon-300) 2px solid;
+    padding: 0.5em 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .75em;
+    box-shadow: 
+    inset 0 0 0.5em 0 var(--neon-300),
+    0 0 0.5em 0 var(--neon-300);
+}
+
+.social-img {
+    width: 2em;
+    height: auto;
+    margin-right: 1em;
+}
+
+.social-link-label {
+    color: var(--neutral-100);
+    font-size: 1.5em;
+    margin-top: 1.5em;
+}
+
+
 /* background text */
 @media (min-width: 480px) {
     .background-text {
@@ -373,5 +422,23 @@ header,
     .background-text {
         font-size: 13rem;
         line-height: 10rem;
+    }
+}
+
+
+/* tiles */
+
+@media (max-width: 360px) {
+    .project-tile {
+        transform: scale(.92);
+    }
+}
+
+/* social section */
+
+@media (min-width: 600px) {
+    #social-container {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
