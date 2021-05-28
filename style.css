@@ -203,19 +203,29 @@ header,
 
 #nucleus {
     position: absolute;
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 28rem;
     height: 28rem;
+
+    background: transparent;
+    border: 1.5rem solid var(--neon-300);
+    border-radius: 50%;
+    box-shadow: 
+    inset 0 0 3em 0 var(--neon-300),
+    0 0 2em 0 var(--neon-300);
+
+    /*
     background: linear-gradient(to top left, var(--neon-300), var(--neutral-900));
     border-radius: 50%;
+    */
 }
 
 #projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 25rem));
-    grid-template-rows: repeat(auto-fill, minmax(25rem, 25rem));
+    grid-template-rows: repeat(auto-fill, minmax(28rem, 28rem));
     grid-gap: 4em;
     justify-content: center;
     padding: 2em;
@@ -223,29 +233,112 @@ header,
 
 .project-tile {
     width: 25rem;
-    height: 25rem;
+    height: 28rem;
     background: var(--neon-300);
-    padding: 13rem 0 0 0;
-    border-radius: 0.5rem;
-    transition: transform 200ms ease-in-out;
+    padding: 15rem 0 0 0;
+    border-radius: 0.75rem;
+    transition: transform 400ms ease;
     color: var(--neutral-100);
+    overflow: hidden;
 }
+
+
+.project-tile:hover,
+.project-tile:focus-within {
+    transform: scale(1.03);
+}
+.project-tile:hover .tile-content {
+    transform: translateY(0%);
+}
+
 
 .tile-content {
-    padding: 1.5em;
+    height: auto;
+    padding: 1em 1.5em 2.5em 1.5em;
     background: linear-gradient(
         hsl(0 2% 10% / 0),
+        hsl(0 2% 10% / 0.8) 20%,
         hsl(0 2% 10%/ 1)
     );
-    border-radius: 0 0 .5em .5em;
+    /* border-radius: 0 0 .2em .2em; */
+
+    transform: translateY(58%);
+    transition: transform 400ms ease;
 }
 
-/*
-.project-tile:hover,
-.project-tile:focus {
-    transform: scale(1.02);
+.tile-body {
+    padding: 0 0 1em 0;
 }
-*/
+
+.btn {
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--neon-300);
+    text-shadow:
+    0 0 0.125em var(--neon-200),
+    0 0 .5em var(--neon-300);
+
+    border: var(--neon-300) 2px solid;
+    padding: .25em 1em;
+    border-radius: .5em;
+    box-shadow: 
+    inset 0 0 0.5em 0 var(--neon-300),
+    0 0 0.5em 0 var(--neon-300);
+
+    /*
+    width: 6em;
+    height: 3em;
+    padding: .5em 2em;
+    color: var(--neutral-100);
+    text-decoration: none;
+    background: var(--neon-300);
+    */
+}
+
+#tile1 {
+    background-image: url("images/tile1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile2 {
+    background-image: url("images/tile2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile3 {
+    background-image: url("images/tile3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile4 {
+    background-image: url("images/tile4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile5 {
+    background-image: url("images/tile5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile6 {
+    background-image: url("images/tile6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /* background text */
 @media (min-width: 480px) {
@@ -278,7 +371,7 @@ header,
 
 @media (min-width: 1500px) {
     .background-text {
-        font-size: 12rem;
-        line-height: 9.5rem;
+        font-size: 13rem;
+        line-height: 10rem;
     }
 }
