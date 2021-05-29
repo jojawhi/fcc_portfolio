@@ -97,7 +97,7 @@
                     </a>
                 </div>
                 <div class="social-link-container">
-                    <a href="www.linkedin.com/in/jojawhi" class="social-link">
+                    <a href="https://www.linkedin.com/in/jojawhi" class="social-link" target="_blank">
                         <img src="images/linkedin-white.svg" alt="linkedin logo" class="social-img">
                         <h3 class="social-link-label">LinkedIn</h3>
                     </a>
@@ -105,7 +105,21 @@
             </div>
         </section>
         <section id="contact-section">
+            <form action="?" id="contact-form">
+                <label for="name" id="name-label" class="form-label">Name:</label>
+                <input type="text" name="name" id="form-name" class="form-input" placeholder="Jean Luc Picard" required>
 
+                <label for="email" id="email-label" class="form-label">Email:</label>
+                <input type="email" name="email" id="form-email" class="form-input" placeholder="jl.picard@starfleet.com" required>
+                
+                <label for="message" class="form-label" id="message-label">Message:</label>
+                <textarea name="message" id="form-message" class="form-input" placeholder="What can I do for you?" cols="30" rows="10" required></textarea>
+                
+                <button type="submit" id="submit">Send</button>
+            </form>
         </section>
+        <footer id="footer">
+            
+        </footer>
     </body>
 </html>
