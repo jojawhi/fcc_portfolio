@@ -185,14 +185,14 @@ header,
 #welcome-section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10em 10em;
+    grid-template-rows: 4em 4em;
     grid-template-areas:
         "name"
         "subtitle";
     grid-gap: 0;
     width: 100%;
     min-height: 100vh;
-    padding: 13rem 1rem;
+    padding: 42vh 1rem;
     background: transparent;
 
     /*
@@ -582,6 +582,28 @@ header,
     z-index: 1;
 }
 
+#contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#name-container,
+#email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#name-container {
+    width: 40%;
+}
+
+#email-container {
+    width: 55%;
+}
+
 .form-label {
     width: 100%;
     height: auto;
@@ -687,16 +709,21 @@ textarea {
 }
 
 @media (min-width: 600px) {
-    .background-text {
-        font-size: 7rem;
-        line-height: 5.5rem;
+    #background-container {
+        width: 100%;
+        max-width: 100%;
     }
-
-}
-@media (min-width: 768px) {
+    
     .background-text {
-        font-size: 7rem;
-        line-height: 5.5rem;
+        font-size: 5.25rem;
+        line-height: 4rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    .background-text {
+        font-size: 6.5rem;
+        line-height: 5rem;
     }
 }
 
@@ -732,7 +759,7 @@ textarea {
 
 @media (min-width: 600px) {
     #welcome-section {
-        grid-template-rows: 12.5em 10em;
+        padding-top: 45vh;
     }
     
     #graphic-container {
@@ -749,6 +776,25 @@ textarea {
     }
 }
 
+@media (min-width: 768px) { 
+    #welcome-section {
+        padding: 42vh 1em;
+    }
+    #graphic-container {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    #name {
+        font-size: 3rem;
+    }
+
+    #subtitle {
+        font-size: 2rem;
+        margin-top: -0.5rem;
+    }
+}
+
 
 /* tiles */
 
@@ -759,6 +805,10 @@ textarea {
 }
 
 @media (min-width: 480px) {
+    #projects {
+        grid-gap: 3em;
+    }
+    
     .project-tile {
         width: 20rem;
         height: 20rem;
@@ -775,8 +825,30 @@ textarea {
     .project-tile {
         width: 22rem;
         height: 22rem;
-        padding-top: 12em;
+        padding-top: 12rem;
         transform: scale(1);
+    }
+}
+
+@media (min-width: 768px) {
+    
+    #projects {
+        grid-template-rows: repeat(auto-fill, minmax(28rem, 28rem));
+        grid-gap: 3em;
+    }
+    
+    .project-tile {
+        width: 25rem;
+        height: 28rem;
+        padding-top: 14.5em;
+        transform: scale(1);
+    }
+
+    .tile-content {
+        height: 15rem;
+        font-size: 1em;
+        padding: 1em 1.5em 2.5em 1.5em;
+    
     }
 }
 
@@ -788,6 +860,28 @@ textarea {
     }
 }
 
+@media (min-width: 768px) {
+    .social-heading {
+        font-size: 3rem;
+    }
+    
+    .social-subheading {
+        font-size: 2.25rem;
+    }
+    
+    .social-text {
+        font-size: 2rem;
+    }
+
+    #cta {
+        font-size: 3.75rem;
+    }
+
+    .social-link {
+        font-size: 1.25rem;
+    }
+}
+
 
 /* contact form */
 
@@ -795,5 +889,31 @@ textarea {
     #contact-form {
         max-width: 80%;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 600px) {
+    #contact-form {
+        max-width: 85%;
+    }
+
+    #submit {
+        height: 2.75rem;
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #contact-info-container {
+        flex-direction: row;
+    }
+
+    .form-label {
+        font-size: 1.25rem;
+    }
+
+    #submit {
+        height: 3rem;
+        font-size: 1.25rem;
     }
 }
