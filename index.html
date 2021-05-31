@@ -94,7 +94,7 @@
                     <h1 class="social-heading">Got a passion project?</h1>
                     <h2 class="social-subheading">If you are...</h2>
                     <h3 class="social-text">Improving access to education</h3>
-                    <h3 class="social-text">Helping creat a sustainable society</h3>
+                    <h3 class="social-text">Helping create a sustainable society</h3>
                     <h3 class="social-text">Inspiring creativity</h3>
                     <h2 class="social-heading" id="cta">Let's connect!</h2>
                 </div>
@@ -114,14 +114,17 @@
         </section>
         <section id="contact-section">
             <form action="?" id="contact-form">
-                <label for="name" id="name-label" class="form-label">Name:</label>
-                <input type="text" name="name" id="form-name" class="form-input" placeholder="Jean Luc Picard" required>
+                <div id="contact-info-container">
+                    <label for="name" id="name-label" class="form-label">Name:</label>
+                    <input type="text" name="name" id="form-name" class="form-input" placeholder="Jean Luc Picard" required>
 
-                <label for="email" id="email-label" class="form-label">Email:</label>
-                <input type="email" name="email" id="form-email" class="form-input" placeholder="jl.picard@starfleet.com" required>
-                
-                <label for="message" class="form-label" id="message-label">Message:</label>
-                <textarea name="message" id="form-message" class="form-input" placeholder="What can I do for you?" cols="30" rows="10" required></textarea>
+                    <label for="email" id="email-label" class="form-label">Email:</label>
+                    <input type="email" name="email" id="form-email" class="form-input" placeholder="jl.picard@starfleet.com" required>
+                </div>
+                <div id="message-container">
+                    <label for="message" class="form-label" id="message-label">Message:</label>
+                    <textarea name="message" id="form-message" class="form-input" placeholder="What can I do for you?" cols="30" rows="10" required></textarea>
+                </div>
                 <div id="captcha">
 
                 </div>
@@ -129,7 +132,9 @@
             </form>
         </section>
         <footer id="footer">
-          
+          <div id="footer-container">
+              <p id="footer-text">Designed and built by Josh White. Hosted by <a href="https://www.dreamhost.com/" target="_blank" rel="noopener noreferrer">DreamHost</a>.</p>
+          </div>
         </footer>
     </body>
 </html>
