@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 :root {
     --neutral-100: hsl(10, 2%, 90%);
+    --neutral-500: hsl(10, 2%, 25%);
     --neutral-900: hsl(0, 2%, 10%);
     --neon-300: hsl(190, 100%, 40%);
     --neon-200: hsl(190, 100%, 60%);
@@ -21,7 +23,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     background: var(--neutral-900);
     scroll-behavior: smooth;
@@ -243,6 +245,7 @@ header,
     color: var(--neutral-100);
     border-radius: 0.75rem;
     overflow: hidden;
+    box-shadow: 0 0 10px var(--neutral-500);
     transition: 400ms ease;
 }
 
@@ -287,42 +290,56 @@ header,
 }
 
 #tile1 {
-    background-image: url("images/tile1.png");
+    background-image: url("images/odin-rpsls.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #tile2 {
-    background-image: url("images/tile2.png");
+    background-image: url("images/calc.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #tile3 {
-    background-image: url("images/tile3.png");
+    background-image: url("images/sketch.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #tile4 {
-    background-image: url("images/tile4.png");
+    background-image: url("images/weather.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #tile5 {
-    background-image: url("images/tile5.png");
+    background-image: url("images/tabeyou.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #tile6 {
-    background-image: url("images/tile6.png");
+    background-image: url("images/watermy.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile7 {
+    background-image: url("images/form.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tile8 {
+    background-image: url("images/docs.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -350,7 +367,7 @@ header,
 }
 
 #social-text-container {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--neutral-100);
     text-align: center;
 }
@@ -359,8 +376,8 @@ header,
     font-size: 2rem;
     font-weight: 700;
     text-shadow:
-    0 0 0.25em var(--neutral-100),
-    0 0 .5em var(--neon-300);
+    0 0 0.125em var(--neutral-500),
+    0 0 .25em var(--neon-300);
 }
 
 .social-subheading {
@@ -369,7 +386,7 @@ header,
 }
 
 .social-text {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
 }
 
@@ -377,8 +394,8 @@ header,
     font-size: 2.5rem;
     color: var(--neon-300);
     text-shadow:
-    0 0 0.125em var(--neon-200),
-    0 0 .5em var(--neon-300);
+    0 0 0.125em var(--neutral-500),
+    0 0 0.125em var(--neon-300);
 }
 
 #social-link-wrapper {
